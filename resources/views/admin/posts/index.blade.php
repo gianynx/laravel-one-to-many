@@ -7,7 +7,7 @@
 @section('content')
     <div class="container">
         <div class="text-center pt-5 pb-5">
-            <h1>Laravel Projects</h1>
+            <h1 class="fw-bold">Projects</h1>
         </div>
         @if (session()->has('message'))
             <div class="alert alert-danger">
@@ -31,7 +31,7 @@
                         <td class="px-5">{{ $post->id }}</td>
                         <td class="px-5"><img class="img-fluid w-25" src="{{ $post->image }}" alt="{{ $post->title }}">
                         </td>
-                        <td class="fs-4 px-5">{{ $post->title }}</td>
+                        <td class="fs-5 px-5">{{ $post->title }}</td>
                         <td>
                             <div class="px-5">
                                 <a href="{{ route('admin.posts.show', $post->slug) }}">
@@ -43,7 +43,8 @@
                 @endforeach
             </tbody>
         </table>
-        <a class="btn btn-outline-dark text-uppercase" href="{{ route('admin.posts.create') }}">create a new project</a>
+        <a class="btn btn-outline-dark text-uppercase mt-4" href="{{ route('admin.posts.create') }}">create a new
+            project</a>
         {{ $posts->links('vendor.pagination.bootstrap-5') }}
     </div>
 @endsection
