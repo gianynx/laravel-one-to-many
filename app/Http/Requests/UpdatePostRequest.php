@@ -41,6 +41,10 @@ class UpdatePostRequest extends FormRequest
                 'string',
                 'max:255',
                 'min:3'
+            ],
+            'technology_id' => [
+                'nullable',
+                'exists:posts,id'
             ]
         ];
     }

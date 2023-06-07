@@ -19,7 +19,15 @@
         </div>
         <div class="pt-5">
             <h2 class="text-secondary">Description</h2>
-            <p class="pt-4 pb-5">{{ $post->body }}</p>
+            <p class="pt-2 pb-5">{{ $post->body }}</p>
+        </div>
+        <div class="pt-2">
+            <h2 class="text-secondary">Technology:</h2>
+            <div class="pb-5">
+                @if ($post->technology_id)
+                    {{ $post->technology->name }}
+                @endif
+            </div>
         </div>
         <div class="pb-5">
             <a class="btn btn-outline-dark text-uppercase" href="{{ route('admin.posts.edit', $post->slug) }}">

@@ -26,7 +26,8 @@ class StorePostRequest extends FormRequest
         return [
             'image' => 'required',
             'title' => 'required|string|max:255|min:3',
-            'body' => 'required|string|max:255|min:3'
+            'body' => 'required|string|max:255|min:3',
+            'technology_id' => 'nullable|exists:posts,id'
         ];
     }
 

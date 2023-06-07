@@ -19,8 +19,9 @@
                 <tr>
                     <th scope="col"></th>
                     <th scope="col" class="px-5">ID</th>
-                    <th scope="col" class="px-5">Image</th>
-                    <th scope="col" class="px-5">Title</th>
+                    <th scope="col" class="px-5">Image technology</th>
+                    <th scope="col" class="px-5">Project title</th>
+                    <th scope="col" class="px-5">Technology</th>
                     <th scope="col" class="px-5">Explore</th>
                 </tr>
             </thead>
@@ -32,6 +33,11 @@
                         <td class="px-5"><img class="img-fluid w-25" src="{{ $post->image }}" alt="{{ $post->title }}">
                         </td>
                         <td class="fs-5 px-5">{{ $post->title }}</td>
+                        <td class="fs-5 px-5">
+                            @if ($post->technology_id)
+                                {{ $post->technology->name }}
+                            @endif
+                        </td>
                         <td>
                             <div class="px-5">
                                 <a href="{{ route('admin.posts.show', $post->slug) }}">

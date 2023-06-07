@@ -23,6 +23,22 @@
                 <div id="titleHelp" class="form-text">Insert a title!</div>
             </div>
             <div class="mb-3">
+                <label for="technology_id" class="form-label fw-bold">Technology</label>
+                <select name="technology_id" id="technology_id"
+                    class="form-select @error('technology_id') is-invalid @enderror">
+                    <option selected>Open this select menu!</option>
+                    @foreach ($technologies as $technology)
+                        <option value="{{ $technology->id }}">
+                            {{ $technology->name }}
+                        </option>
+                    @endforeach
+                </select>
+                <div id="technologyHelp" class="form-text">Insert a technology!</div>
+                @error('technology_id')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-3">
                 <label for="body" class="form-label fw-bold">Body</label>
                 <div>
                     <textarea name="body" id="body" cols="193" rows="7">
