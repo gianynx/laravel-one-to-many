@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('page_title')
-    Laravel Projects
+    Projects
 @endsection
 
 @section('content')

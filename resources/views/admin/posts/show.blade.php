@@ -7,7 +7,7 @@
 @section('content')
     <div class="container text-center">
         <div class="pt-5 pb-5">
-            <h1>{{ $post->title }}</h1>
+            <h1><span class="text-secondary">Project name:</span> {{ $post->title }}</h1>
         </div>
         @if (session()->has('message'))
             <div class="alert alert-danger">
@@ -17,7 +17,10 @@
         <div class="mx-auto w-50">
             <img src="{{ $post->image }}" alt="{{ $post->title }}" class="w-100">
         </div>
-        <p class="pt-4 pb-5">{{ $post->body }}</p>
+        <div class="pt-5">
+            <h2 class="text-secondary">Description</h2>
+            <p class="pt-4 pb-5">{{ $post->body }}</p>
+        </div>
         <div class="pb-5">
             <a class="btn btn-outline-dark text-uppercase" href="{{ route('admin.posts.edit', $post->slug) }}">
                 edit this project
