@@ -29,7 +29,7 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
 {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/posts', PostController::class)->parameters(['posts' => 'post:slug']);
-    Route::resource('technologies', TechnologyController::class)->parameters(['technologies' => 'technology:id']);
+    Route::resource('/technologies', TechnologyController::class)->parameters(['technologies' => 'technology:id']);
 });
 
 // Route::middleware('auth')->group(function () {

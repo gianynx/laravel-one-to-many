@@ -6,7 +6,7 @@
 
 @section('content')
     <section class="container pt-5 pb-5">
-        <h1 class="pb-4">Create a new project</h1>
+        <h1 class="fw-bold pb-4">Create a new project!</h1>
         <form action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
