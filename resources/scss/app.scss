@@ -16,10 +16,7 @@ body {
     --bs-table-border-color: $dark_color;
 }
 
-.form-control {
-    border-color: $dark_color;
-}
-
+.form-control,
 .form-select {
     border-color: $dark_color;
 }

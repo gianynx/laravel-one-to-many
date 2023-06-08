@@ -16,10 +16,10 @@
         @endif
         <table class="table table-striped">
             <thead>
-                <tr>
+                <tr class="fst-italic">
                     <th scope="col"></th>
                     <th scope="col" class="px-5">ID</th>
-                    <th scope="col" class="px-5">Image technology</th>
+                    <th scope="col" class="fs-5 px-5">Image technology</th>
                     <th scope="col" class="px-5">Project title</th>
                     <th scope="col" class="px-5">Technology</th>
                     <th scope="col" class="px-5">Explore</th>
