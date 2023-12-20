@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Technology extends Model
 {
     use HasFactory;
-    protected $fillable = ['image','name', 'body'];
+    protected $fillable = ['image', 'name', 'body'];
     public function posts():HasMany
     {
         return $this->hasMany(Post::class);
